@@ -1,0 +1,43 @@
+{% extends "restaurant_review/base.html" %}
+{% block title %}Dodaj Użytkownika{% endblock %}
+{% block head %}
+    {{ block.super }}
+    <style>
+      body {
+          min-height: 75rem;
+          padding-top: 4.5rem;
+      }
+  </style>
+{% endblock %}
+{% block content %}
+    <h1>Dodaj Nowego Użytkownika</h1>
+
+    <form method="POST" action="{% url 'add_user' %}">
+        <div class="mb-3">
+          <label for="email" class="form-label">Adres e-mail</label>
+          <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="first_name" class="form-label">Imię</label>
+          <input type="text" class="form-control" id="first_name" name="first_name" required>
+        </div>
+        <div class="mb-3">
+          <label for="last_name" class="form-label">Nazwisko</label>
+          <input type="text" class="form-control" id="last_name" name="last_name" required>
+        </div>
+        <div class="mb-3">
+          <label for="phone_number" class="form-label">Numer telefonu (opcjonalnie)</label>
+          <input type="tel" class="form-control" id="phone_number" name="phone_number">
+        </div>
+        <div class="mb-3">
+          <label for="team" class="form-label">Zespół</label>
+          <select class="form-select" id="team" name="team" required>
+            <option value="HR">HR</option>
+            <option value="IT">IT</option>
+            <!-- Dodaj więcej opcji zespołów według potrzeb -->
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Dodaj</button>
+        <a href="{% url 'lista_uzytkownikow' %}" class="btn btn-secondary">Anuluj</a>
+      </form>
+{% endblock %}
