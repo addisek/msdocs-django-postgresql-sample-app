@@ -3,55 +3,31 @@
 <html lang="en">
 <head>
     {% block head %}
-        <title>Azure User Management - {% block title %}{% endblock %}</title>
+        <title>gpwfdsefedweb app with PostgreSQL in Azure - {% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
         <link rel="stylesheet" href="{% static 'fontawesome/css/all.min.css' %}">
-        <link rel="icon" href="{% static 'favicon.ico' %}">
-        <style>
-            /* Dodatkowe style CSS dla lepszego wyglądu */
-            body {
-                background-color: #f8f9fa;
-                padding-top: 60px;
-            }
-            .navbar {
-                background-color: #007BFF;
-            }
-            .navbar-brand {
-                color: #fff;
-                font-weight: bold;
-            }
-            .navbar-toggler-icon {
-                background-color: #fff;
-            }
-            .navbar-nav .nav-item .nav-link {
-                color: #fff;
-            }
-            .container {
-                background-color: #fff;
-                border-radius: 5px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-                padding: 20px;
-            }
-        </style>
+        <link rel="icon"href="{% static 'favicon.ico' %}">
     {% endblock %}
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-light fixed-top">
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light">
         <div class="container">
           <a class="navbar-brand" href="/">
             <img src="{% static 'images/azure-icon.svg' %}" alt="" width="30" height="24" class="d-inline-block align-text-top">
-            Azure User Management
+            Azure Restaurant Review
           </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">                
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav mb-2 mb-md-0 ms-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="true">User Management</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="dropdown07XL" data-bs-toggle="dropdown" aria-expanded="true">Azure Docs</a>
                     <ul class="dropdown-menu" aria-labelledby="dropdown07XL" data-bs-popper="none">
-                        <li><a class="dropdown-item" href="{% url 'user_list' %}" style="color: #000;">User List</a></li>
-                        <li><a class="dropdown-item" href="{% url 'add_user' %}" style="color: #000;">Add User</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://docs.microsoft.com/azure">Azure Docs Home</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="#">Python Web App + PostgreSQL Database Tutorial</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://azure.microsoft.com/develop/python/">Python on Azure</a></li>
+                        <li><a class="dropdown-item" target="_blank" href="https://docs.microsoft.com/azure/developer/python">Python on Azure Developer Center</a></li>
                     </ul>
                 </li>
             </ul>
