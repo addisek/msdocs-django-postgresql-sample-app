@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+  <h1>Witaj na mojej stronie!</h1>
+  <p>To jest strona startowa mojej aplikacji.</p>
+  <a href="{% url 'login' %}" class="btn btn-primary">Zaloguj się</a>
+  <a href="{% url 'contact' %}" class="btn btn-secondary">Kontakt</a>
+</div>
+{% endblock %}
